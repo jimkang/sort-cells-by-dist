@@ -3,7 +3,7 @@ sort-cells-by-dist
 
 Sorts the cells in a grid by their distance from a particular cell.
 
-You give it cells (objects with `col` and `row` properties), and it gives you the index of the cells in order from close to far.
+You give it cells (objects with `col` and `row` properties), and it gives you the indexes of the cells in order from close to far.
 
 Installation
 ------------
@@ -13,9 +13,65 @@ Installation
 Usage
 -----
 
-    var sortGridByDist = require('sort-cells-by-dist');
-    var thing = someFactory();
-    thing.use();
+    var sortCellsByDist = require('sort-cells-by-dist');
+    var cells = [
+      { type: 'populated', col: 0, row: 0 },
+      { type: 'populated', col: 1, row: 0 },
+      { type: 'populated', col: 2, row: 0 },
+      { type: 'populated', col: 3, row: 0 },
+      { type: 'populated', col: 4, row: 0 },
+      { type: 'populated', col: 0, row: 1 },
+      { type: 'populated', col: 1, row: 1 },
+      { type: 'populated', col: 2, row: 1 },
+      { type: 'populated', col: 3, row: 1 },
+      { type: 'populated', col: 4, row: 1 },
+      { type: 'populated', col: 0, row: 2 },
+      { type: 'populated', col: 1, row: 2 },
+      { type: 'populated', col: 2, row: 2 },
+      { type: 'populated', col: 3, row: 2 },
+      { type: 'populated', col: 4, row: 2 },
+      { type: 'populated', col: 0, row: 3 },
+      { type: 'populated', col: 1, row: 3 },
+      { type: 'populated', col: 2, row: 3 },
+      { type: 'populated', col: 3, row: 3 },
+      { type: 'populated', col: 4, row: 3 },
+      { type: 'populated', col: 0, row: 4 },
+      { type: 'populated', col: 1, row: 4 },
+      { type: 'populated', col: 2, row: 4 },
+      { type: 'populated', col: 3, row: 4 },
+      { type: 'populated', col: 4, row: 4 }
+    ];
+    sortCellsByDist(cells, {col: 2, row: 3});
+
+Returns:
+
+    [
+      17,
+      18,
+      16,
+      22,
+      12,
+      13,
+      11,
+      21,
+      23,
+      7,
+      15,
+      19,
+      24,
+      20,
+      14,
+      6,
+      8,
+      10,
+      9,
+      5,
+      2,
+      1,
+      3,
+      0,
+      4
+    ]
 
 Tests
 -----
