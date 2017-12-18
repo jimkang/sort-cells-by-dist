@@ -102,7 +102,7 @@ function runTest(testCase) {
 
   function testOrder(t) {
     t.deepEqual(
-      sortCellsByDist(cells, testCase.origin),
+      sortCellsByDist(testCase.origin, cells),
       testCase.expectedOrder,
       'Order is correct.'
     );

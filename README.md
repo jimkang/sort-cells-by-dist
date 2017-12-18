@@ -41,7 +41,7 @@ Usage
       { type: 'populated', col: 3, row: 4 },
       { type: 'populated', col: 4, row: 4 }
     ];
-    sortCellsByDist(cells, {col: 2, row: 3});
+    sortCellsByDist({col: 2, row: 3}, cells);
 
 Returns:
 

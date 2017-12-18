@@ -1,6 +1,6 @@
 var pluck = require('lodash.pluck');
 
-function sortCellsByDist(cells, origin) {
+function sortCellsByDist(origin, cells) {
   var indexedDistances = cells.map(getDistanceFromOriginAndIndex);
   var sortedIndexedDistances = indexedDistances.sort(compareDist);
   // console.log('sortedIndexedDistances', sortedIndexedDistances);
