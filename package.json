@@ -1,6 +1,6 @@
 {
   "name": "sort-cells-by-dist",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Sorts the cells in a grid by their distance from a particular cell.",
   "main": "index.js",
   "scripts": {
