@@ -73,6 +73,8 @@ Returns:
       4
     ]
 
+You can also pass in optional parameters to tell it what to use as column and row accessor properties. For example, if your cells were all two-element arrays like `[0, 5]`, you could use: `sortCellsByDist(testCase.origin, cells, '0', '1')`
+
 Tests
 -----
 
